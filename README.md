@@ -1,5 +1,5 @@
 # Solidity-Gas-Optimizations
-Solidity Gas Optimization Tips
+Solidity Gas Optimization Tips taken from various sources (sources listed in the #credits section below). Make pull requests to contribute gas alpha. 
 
 
 # Gas Optimizations in Solidity
@@ -485,4 +485,3 @@ Whenever it is possible to set an upper bound on the size of an array, use a fix
 - https://mudit.blog/solidity-gas-optimization-tips/
 - http://www.cs.toronto.edu/~fanl/papers/gas-brain21.pdf
 - https://gist.github.com/hrkrshnn/ee8fabd532058307229d65dcd5836ddc
-- 
