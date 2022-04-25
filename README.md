@@ -1,4 +1,4 @@
-# Solidity-Gas-Optimizations
+# Solidity Gas Optimization Tips
 Solidity Gas Optimization Tips taken from various sources (sources listed in the #credits section below). Make pull requests to contribute gas alpha. 
 
 
