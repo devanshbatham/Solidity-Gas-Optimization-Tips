@@ -475,6 +475,40 @@ In order to save gas, it is recommended to use mappings to manage lists of data,
 
 Whenever it is possible to set an upper bound on the size of an array, use a fixed size array instead of a dynamic one.
 
+## 32- Use Custom errors instead of revert strings
+
+Custom errors from Solidity 0.8.4 are cheaper than revert strings (cheaper deployment cost and runtime cost when the revert condition is met)
+
+**Code Example:**
+
+```solidity
+
+// Revert Strings 
+contract C {
+    address payable owner;
+
+    function withdraw() public {
+        require(msg.sender == owner, "Unauthorized");
+
+        //..
+    }
+}
+
+
+//Custom errors
+error Unauthorized();
+
+contract C {
+    address payable owner;
+
+    function withdraw() public {
+        if (msg.sender != owner)
+            revert Unauthorized();
+
+        //..
+    }
+}
+```
 
 ## Credits
 
