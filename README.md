@@ -77,7 +77,7 @@ It is considered a best practice to append the error reason string with `require
 
 ```solidity
 require(balance >= amount, "Insufficient balance");//good
-require(balance >= amount, "Too bad, it appears, ser you are broke, bye bye"; //bad
+require(balance >= amount, "Too bad, it appears, ser you are broke, bye bye"); //bad
 ```
 
 ## 5- Avoid redundant checks
@@ -278,7 +278,7 @@ Libraries are often only imported for a small number of uses, meaning that they 
 
 
 ## 16- Make fewer external calls
-External calls are expensive, therefore, fewer external gas == fewer gas cost.
+External calls are expensive, therefore, fewer external calls == fewer gas cost.
 
 
 ## 17- `unchecked { ++i;}` is cheaper than `i++;` & `i=i+1;`
@@ -383,7 +383,7 @@ Also, it is important to note that, If not specified data location, then it stor
 contract C {
     function add(uint[] memory arr) external returns (uint sum) {
         uint length = arr.length;
-        for (uint i = 0; i < arr.length; i++) {
+        for (uint i = 0; i < length; i++) {
             sum += arr[i];
         }
     }
@@ -397,7 +397,7 @@ In the above example, the dynamic array `arr` has the storage location `memory`.
 contract C {
     function add(uint[] calldata arr) external returns (uint sum) {
         uint length = arr.length;
-        for (uint i = 0; i < arr.length; i++) {
+        for (uint i = 0; i < length; i++) {
             sum += arr[i];
         }
     }
